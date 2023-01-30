@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var redLight: UIView!
     @IBOutlet var yellowLight: UIView!
     @IBOutlet var greenLight: UIView!
-    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var switchButton: UIButton!
     
  
     
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextButton.layer.cornerRadius = 10
+        switchButton.layer.cornerRadius = 10
         
         redLight.layer.cornerRadius = circle
         yellowLight.layer.cornerRadius = circle
@@ -39,7 +39,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextButtonTapped() {
+        
+        if switchButton.currentTitle == "START" {
+            switchButton.setTitle("NEXT", for: .normal)
+        }
     
+        
         if isOn(redLight) {
             turnOff(redLight)
             turnOn(yellowLight)
