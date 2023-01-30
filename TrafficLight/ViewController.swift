@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private let circle: CGFloat = 50
-    private let lightOff: CGFloat = 0.3
-    private let lightOn: CGFloat = 1
+
     
     
     @IBOutlet var redLight: UIView!
@@ -35,23 +34,23 @@ class ViewController: UIViewController {
         greenLight.layer.cornerRadius = circle
         
         turnOff(redLight)
-        turnOn(yellowLight)
+        turnOff(yellowLight)
         turnOff(greenLight)
     }
 
     @IBAction func nextButtonTapped() {
     
         if isOn(redLight) {
-            redLight.alpha = lightOff
-            yellowLight.alpha = lightOn
+            turnOff(redLight)
+            turnOn(yellowLight)
         } else if isOn(yellowLight) {
-            yellowLight.alpha = lightOff
-            greenLight.alpha = lightOn
+            turnOff(yellowLight)
+            turnOn(greenLight)
         } else if isOn(greenLight) {
-            greenLight.alpha = lightOff
-            redLight.alpha = lightOn
+            turnOff(greenLight)
+            turnOn(redLight)
         } else {
-            redLight.alpha = lightOn
+            turnOn(redLight)
         }
         
     }
@@ -69,9 +68,8 @@ class ViewController: UIViewController {
         light.alpha = 1
     }
     
-    private func turnOn (_ light: UIView) ->  UIView! {
+    private func turnOn (_ light: UIView) {
         light.alpha = 1
-        return light
     }
     
     
