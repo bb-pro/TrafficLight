@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     }
     
     private func turnOff (_ light: UIView) {
-        light.alpha = 1
+        light.alpha = 0.3
     }
     
     private func turnOn (_ light: UIView) {
