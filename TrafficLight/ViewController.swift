@@ -8,43 +8,36 @@
 import UIKit
 
 
-class ViewController: UIViewController {
-    
-    private let circle: CGFloat = 50
-
-    
-    
+final class ViewController: UIViewController {
+//MARK: - IB Outlets
     @IBOutlet var redLight: UIView!
     @IBOutlet var yellowLight: UIView!
     @IBOutlet var greenLight: UIView!
     @IBOutlet var switchButton: UIButton!
     
- 
-    
-    
-  
-    
+
+
+//MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        let roundCorner = redLight.frame.width / 2
         
         switchButton.layer.cornerRadius = 10
         
-        redLight.layer.cornerRadius = circle
-        yellowLight.layer.cornerRadius = circle
-        greenLight.layer.cornerRadius = circle
+        redLight.layer.cornerRadius = roundCorner
+        yellowLight.layer.cornerRadius = roundCorner
+        greenLight.layer.cornerRadius = roundCorner
         
         turnOff(redLight)
         turnOff(yellowLight)
         turnOff(greenLight)
     }
-
+//MARK: - IB Actions
     @IBAction func nextButtonTapped() {
-        
         if switchButton.currentTitle == "START" {
             switchButton.setTitle("NEXT", for: .normal)
         }
     
-        
         if isOn(redLight) {
             turnOff(redLight)
             turnOn(yellowLight)
@@ -57,16 +50,10 @@ class ViewController: UIViewController {
         } else {
             turnOn(redLight)
         }
-        
     }
-    
-    
+//MARK: - Private Methods
     private func isOn(_ light: UIView!) -> Bool {
-        if light.alpha.isEqual(to: 1) {
-            return true
-        } else {
-            return false
-        }
+        light.alpha.isEqual(to: 1)
     }
     
     private func turnOff (_ light: UIView) {
@@ -76,9 +63,7 @@ class ViewController: UIViewController {
     private func turnOn (_ light: UIView) {
         light.alpha = 1
     }
-    
-    
-    }
+}
 
 
 
