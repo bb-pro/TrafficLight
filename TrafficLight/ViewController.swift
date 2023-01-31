@@ -15,8 +15,6 @@ final class ViewController: UIViewController {
     @IBOutlet var greenLight: UIView!
     @IBOutlet var switchButton: UIButton!
     
-
-
 //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
