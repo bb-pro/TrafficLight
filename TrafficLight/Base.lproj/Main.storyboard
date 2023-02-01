@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cAE-cl-TIt">
-                                <rect key="frame" x="146.66666666666666" y="109" width="100" height="316"/>
+                                <rect key="frame" x="137.66666666666666" y="97" width="100" height="316"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihs-Ta-Vw0">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -47,10 +47,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8R-pO-qeG">
-                                <rect key="frame" x="146.66666666666666" y="768" width="100" height="30"/>
+                                <rect key="frame" x="152.66666666666666" y="668" width="70" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lRb-BA-KVT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="1eD-VZ-N4J"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START">
@@ -60,23 +60,14 @@
                                     <action selector="nextButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="lmG-Rs-uma"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrafficLIght" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g85-89-gLM">
-                                <rect key="frame" x="153" y="59.000000000000007" width="87" height="20.333333333333336"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="G8R-pO-qeG" firstAttribute="trailing" secondItem="cAE-cl-TIt" secondAttribute="trailing" id="0Zo-H3-EFp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G8R-pO-qeG" secondAttribute="bottom" constant="20" id="5Du-7X-KUe"/>
-                            <constraint firstItem="G8R-pO-qeG" firstAttribute="leading" secondItem="cAE-cl-TIt" secondAttribute="leading" id="7Ag-xW-h2k"/>
-                            <constraint firstItem="cAE-cl-TIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wzs-Cp-y0h"/>
-                            <constraint firstItem="g85-89-gLM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hDr-rb-4GA"/>
-                            <constraint firstItem="g85-89-gLM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tIC-PH-j7r"/>
-                            <constraint firstItem="cAE-cl-TIt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="v4L-Xg-XLn"/>
+                            <constraint firstItem="cAE-cl-TIt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="B1R-gr-0ul"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G8R-pO-qeG" secondAttribute="bottom" constant="80" id="HXI-aq-zDF"/>
+                            <constraint firstItem="G8R-pO-qeG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y6V-sd-yNO"/>
+                            <constraint firstItem="cAE-cl-TIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zXx-yr-jbS"/>
                         </constraints>
                     </view>
                     <connections>
